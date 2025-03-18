@@ -21,7 +21,11 @@ export const getSnbp = async (id: string): Promise<SnbpDocumentData> => {
             fetched_at: Date.now(),
         };
 
-        await firestoreApp.collection('snbp').add(payload);
+        // only store accepted user
+        if (response.ac_pt) {
+            await firestoreApp.collection('snbp').add(payload);
+        }
+
         return payload;
     }
 
