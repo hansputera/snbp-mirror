@@ -8,7 +8,7 @@ export const getSnbp = async (id: string): Promise<SnbpDocumentData> => {
     const data = docs.docs.at(0)?.data();
 
     if (!data) {
-        const response = await ky.get<Record<string, string>>('./static/'.concat(encodeURIComponent(id)), {
+        const response = await ky.get<SnbpDocumentData['data']>('./static/'.concat(encodeURIComponent(id)), {
             prefixUrl: SNBP_URL,
             headers: {
                 'Content-Type': 'application/json',
