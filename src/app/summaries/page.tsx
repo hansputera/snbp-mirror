@@ -45,7 +45,7 @@ export default function Home() {
     }
 
     const response = await ky
-      .get<{ data?: SnbpSchoolSummary }>("/api/summaries", {
+      .get<{ data?: SnbpSchoolSummary }>("/api/summary", {
         searchParams: new URLSearchParams({
           school: searchTerm,
         }),
@@ -468,23 +468,6 @@ export default function Home() {
           </div>
         )}
       </div>
-
-      {/* Footer */}
-      <footer className="bg-gradient-to-r from-blue-800 to-blue-900 text-white py-6 mt-12">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-sm">
-            © {new Date().getFullYear()}{" "}
-            <a href="https://linkedin.com/in/hansputera" target="_blank">
-              Hanif Dwy Putra S
-            </a>{" "}
-            and{" "}
-            <a href="https://v0.dev" target="_blank">
-              v0.dev
-            </a>
-            . All rights reserved.
-          </p>
-        </div>
-      </footer>
     </main>
   );
 }

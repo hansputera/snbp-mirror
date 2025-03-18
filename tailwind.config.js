@@ -73,6 +73,28 @@ module.exports = {
           },
           indigo: {
             100: "#E0E7FF",
+            500: "#6366F1",
+          },
+          purple: {
+            500: "#8B5CF6",
+          },
+          pink: {
+            500: "#EC4899",
+          },
+          orange: {
+            500: "#F97316",
+          },
+          yellow: {
+            500: "#EAB308",
+          },
+          green: {
+            500: "#22C55E",
+          },
+          teal: {
+            500: "#14B8A6",
+          },
+          cyan: {
+            500: "#06B6D4",
           },
         },
         borderRadius: {
